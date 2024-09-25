@@ -45,8 +45,15 @@ RUN CFLAGS=-s pip3 install -U /tmp/build/beancount
 RUN pip3 install -U /tmp/build/fava
 ADD requirements.txt .
 RUN pip3 install --require-hashes -U -r requirements.txt
+RUN pip3 install smart_importer==0.5
+RUN pip3 install bs4==0.0.2
+RUN pip3 install PyPDF4==1.27.0
+RUN pip3 install Utsuho==2.1.0
+RUN pip3 install iso3166==2.1.1
+RUN pip3 install countryinfo==0.1.2
 RUN pip3 install git+https://github.com/beancount/beanprice.git@41576e2ac889e4825e4985b6f6c56aa71de28304
-RUN pip3 install git+https://github.com/andreasgerstmayr/fava-portfolio-returns.git@de68b54f3ac517adfde3a4ccb41fdb09a0da41d1
+RUN pip3 install git+https://github.com/andreasgerstmayr/fava-portfolio-returns.git@152a1057c065c2ecd0e91ef62c9d73081f833329
+RUN pip3 install git+https://github.com/andreasgerstmayr/fava-dashboards.git@50a0b7c8b20e50b15bf491329e1ecab6598d8b96
 
 RUN pip3 uninstall -y pip
 
