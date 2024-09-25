@@ -2,7 +2,6 @@
 
 A Dockerfile for beancount-fava
 
-
 ## Usage Example
 
 You can get started creating a container from this image, you can either use docker-compose or the docker cli.
@@ -23,9 +22,7 @@ docker run -d \
 
 ### Docker Compose
 
-```yml
----
-version: "3.0"
+```yaml
 services:
   fava:
     container_name: fava
@@ -47,8 +44,8 @@ services:
 
 ## Note on auto build
 
-The [docker image](https://hub.docker.com/r/yegle/fava) was switched
+The [docker image](https://hub.docker.com/r/jeandeaual/fava) was switched
 from build by Docker Hub to Github Actions. The image label pattern is
 changed: instead of labeled `version-1.xx` it's now labeled `v1.xx`.
 
-You can check the auto build logs at https://github.com/yegle/fava-docker/actions.
+You can check the auto build logs at https://github.com/jeandeaual/fava-docker/actions.
